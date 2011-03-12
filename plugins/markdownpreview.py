@@ -149,8 +149,8 @@ class MarkdownPreviewPlugin(gedit.Plugin):
 		
 		text = doc.get_text(start, end)
 
-		extensions = ['codehilite', 'toc']
-		markdown_text = markdown.markdown(text, extensions)
+		p = subprocess.Popen(['pandoc', '--from=markdown', '--to=html'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+		markdown_text = p.communicate(text)[0]
 
 		home = os.path.expanduser("~")
 
