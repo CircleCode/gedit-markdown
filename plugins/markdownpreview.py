@@ -27,7 +27,7 @@ import gedit
 import sys
 import gtk
 import webkit
-import markdown
+import subprocess
 import gconf
 import os
 
