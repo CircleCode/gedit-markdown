@@ -58,7 +58,7 @@ class MarkdownPreviewPlugin(gedit.Plugin):
 		action = ("Markdown Preview",
 			  None,
 			  "Markdown Preview",
-			  "<Control><Shift>M",
+			  "<Alt><Shift>P",
 			  "Update the HTML preview",
 			  lambda x, y: self.update_preview(y))
 		
